@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.background{
+    height: 100vh;
+    background: url("images/background.jpg");
+    background-size: cover;
+}
+
+.form-container{
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #fff;
+}
+.form-container .login-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+}
+.form-container .login-left h1{
+    /* letter-spacing: .1em; */
+    letter-spacing: .05em;
+    text-align: center;
+}
+
+.form-container .login-left p{
+    font-size: 1.1em;
+}
+.form-container .login-left p a{
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.form-container .login-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+    margin-right: 100px;
+    padding: 30px;
+    border-radius: 10px;
+    /* background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(17px); */
+}
+
+.form-container .login-right input{
+    width: 100%;
+    margin: 1em 0;
+    /* padding: 10px 90px 10px 10px; */
+    /* padding: 10px 90px 10px 40px; */
+    padding: 10px 40px;
+    font-weight: bold;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: rgb(251, 251, 251);
+    border-bottom: 2px solid white;
+    transition: all .2s ease-in-out;
+}
+.form-container .login-right input::placeholder{
+    color: white;
+    font-weight: lighter;
+}
+.form-container .login-right .btn{
+    padding: 10px 45px;
+    width: 100%;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 1em;
+    cursor: pointer;
+    transition: transform 300ms ease;
+}
+.form-container .login-right .btn:active{
+    transform: scale(0.98);
+    background-color: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(17px);
+    -webkit-backdrop-filter: blur(172px);
+}
+
+.form-container .login-right input:focus{
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(17px);
+    -webkit-backdrop-filter: blur(172px);
+}
+
+::selection{
+    color: black;
+    background: white;
+}
+
+@media only screen and (max-width: 400px){
+
+    .background{
+        background-size: cover;
+        background-position: 90% 50%;
+    }
+
+    .form-container{
+        flex-direction: column;
+    }
+    .form-container .login-left{
+        width: 100%;
+        text-align: center;
+        margin-top: 2em;
+    }
+    .form-container .login-right{
+        width: 100%;
+        text-align: center;
+        margin: 0;
+    }
+}
